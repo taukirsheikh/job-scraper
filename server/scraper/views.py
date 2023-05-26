@@ -8,5 +8,5 @@ class JobView(View):
     def get(self,request):
         position='python'
         records=scrape_jobs(position)
-        data=records
+        data={'records':records}
         return JsonResponse(data)
