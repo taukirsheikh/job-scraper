@@ -20,7 +20,7 @@ const Footer = () => {
       </a>
       <a href="">
 
-      <ImMail2 className='text-xl' href='mailto:sheikhtaukir21@gmail.com' />
+      <ImMail2 className='text-xl'/>
       </a>
       <a href="mailto:sheikhtaukir21@gmail.com" className=" text-neutral-800 dark:text-neutral-200 mt-[-4px] mr-0 hover:cursor-pointer hover:text-sky-400">
         
