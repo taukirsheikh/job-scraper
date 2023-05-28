@@ -77,3 +77,33 @@ def scrape_jobs(position):
    
 
     return records
+
+
+#cotiviti
+def cotiviti(url_link):
+  def get_record(card):
+    job_title=card.find('h3').text
+    a_tag=card.div.h3.a
+    job_url='https://www.cotiviti.com.np'+a_tag.get('href')
+    record={'job_title':job_title,
+             "job_url":job_url}
+
+    return record
+
+    
+
+  records=[]
+  try:
+    response=requests.get(url_link)
+    soup=BeautifulSoup(response.text,'html.parser')
+    cards=soup.find_all('div', class_='views-row')
+    for card in cards:
+      record=get_record(card)
+      records.append(record)
+
+
+  except Exception as e:
+    print(e)
+    
+  return records
+
