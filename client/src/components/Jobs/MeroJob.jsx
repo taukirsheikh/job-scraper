@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import FromMeroJob from "../../services/JobsApi";
+import {RiBuilding4Line} from 'react-icons/ri'
+import {GoPin} from 'react-icons/go'
 
 const Merojob = () => {
   const [jobData, setJobData] = useState([]);
@@ -59,7 +61,7 @@ const Merojob = () => {
                     key={index}
                     className="md:mt-4  md:w-72   "
                   >
-                    <div className="hover:bg-indigo-400 bg-indigo-300 w-48 h-68 md:h-72  justify-center md:mx-4 mx-0 shadow-md mt-4 md:w-64 p-4 relative z-1">
+                    <div className="hover:bg-indigo-400 bg-indigo-300 w-48 h-68 md:h-72  justify-center md:mx-4 mx-0 rounded shadow-md mt-4 md:w-64 p-4 relative z-1">
                       <h1 className="md:text-xl  font-bold">{job_title}</h1>
                       <div className="text-sm md:text-base">
 
@@ -69,10 +71,10 @@ const Merojob = () => {
                           href={More_jobs}
                           target="_blank"
                         >
-                          🚞 {company}
+                          <RiBuilding4Line className="inline text-2xl text-sky-950"/> {company}
                         </a>
                       </h2>
-                      <h3>📌{location}</h3>
+                      <h3><GoPin className="inline text-2xl text-sky-950"/> {location}</h3>
 
                       <p className="">
                         <strong>Skills:</strong>
