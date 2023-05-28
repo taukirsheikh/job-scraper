@@ -40,8 +40,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="bg-indigo-600 p-4 rounded-b-md">
-      <nav className="max-w-[1440px] py-[0.5rem] items-center mx-auto rounded flex justify-between">
+    <header className="bg-indigo-600 p-4 rounded-b">
+      <nav className="max-w-[1440px] py-[0.5rem] items-center mx-auto rounded flex justify-between  ">
         <div className="text-2xl font-bold bg-indigo-100 p-2 rounded">
         <span className='text-blue-500'>
           Job </span>
@@ -62,9 +62,9 @@ const Navbar = () => {
         </div>
         <ul 
         ref={menuRef}
-          className={`md:flex flex-col md:flex-row gap-20 font-semibold  ${
+          className={`md:flex flex-col md:flex-row gap-20  font-semibold  ${
             menuOpen
-              ? 'transition-all duration-300 fixed mt-[15rem] w-full bg-blue-300 border border-blue-300 rounded flex gap-2 left-0'
+              ? 'transition-all duration-300  fixed mt-[27rem] z-20 w-full bg-blue-300 border border-blue-300 rounded flex gap-2 left-0'
               : 'hidden'
           }`
         }
