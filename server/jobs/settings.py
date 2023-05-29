@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS=['.vercel.app']
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
