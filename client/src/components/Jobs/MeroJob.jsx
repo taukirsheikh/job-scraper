@@ -102,7 +102,7 @@ const Merojob = () => {
             )}
           </div>
         ) : (
-          <p>No Jobs Found</p>
+          <p>Server is down</p>
         )}
       </div>
     </>
